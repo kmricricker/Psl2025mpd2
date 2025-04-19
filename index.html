@@ -18,9 +18,8 @@
             height: 100%;
         }
         .jw-button-color {
-  color: white !important; /* The !important tag may be needed to override existing styles */
-}
-
+            color: white !important; /* The !important tag may be needed to override existing styles */
+        }
     </style>
 </head>
 <body>
@@ -29,15 +28,24 @@
     
     <!-- JW Player script -->
     <script src="https://content.jwplatform.com/libraries/Z79JsmAO.js"></script>
-    <!---DASH Setup-->
+    <!-- DASH Setup -->
     <script>
+        // Telegram confirmation message on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            var a = confirm("Join For More Match Links!!");
+            if (a == true) {
+                window.location.href = "https://t.me/+QRdNAmX47sNkNWFl";  // Updated Telegram channel link
+            }
+        });
+
+        // JW Player setup
         jwplayer("jwplayerDiv").setup({
             file: "https://edge3-moblive.yuppcdn.net/drm/smil:tencricketdrm.smil/manifest.mpd",
             drm: {
-                    clearkey: {
-                        keyId: "9872e439f21f4a299cab249c6554daa3",
-                        key: "0cdfcfe0d0f1fbe100554ce3ef4c4665"
-                            }
+                clearkey: {
+                    keyId: "9872e439f21f4a299cab249c6554daa3",
+                    key: "0cdfcfe0d0f1fbe100554ce3ef4c4665"
+                }
             },
             width: "100%",
             height: "100%",
@@ -74,3 +82,5 @@
             autostart: true
         });
     </script>
+</body>
+</html>
